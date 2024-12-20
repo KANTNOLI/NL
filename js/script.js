@@ -1,14 +1,8 @@
-import crystalLogo from "../img/logo1.png"
-
 console.log(window.innerWidth);
 console.log(window.innerHeight);
 
-if (window.innerWidth > 1440 - 1) {
+if (window.innerWidth > 1050) {
   document.body.classList.add("padding20");
-} else if (window.innerWidth > 800 + 1 || window.innerWidth < 1440 - 1) {
-  document.body.classList.add("padding10");
-} else if (window.innerWidth < 800 + 1) {
-  document.body.classList.add("padding5");
 }
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -16,19 +10,21 @@ function rand(min, max) {
 
 for (let i = 0; i < 10; i++) {
   let crystal = document.createElement("img");
-  crystal.src = crystalLogo;
+  crystal.src = "../img/logo1.png";
   crystal.classList.add("crystal");
   crystal.style.position = "absolute";
   crystal.style.top = `${rand(
     0,
-    document.documentElement.scrollHeight - 50
+    document.documentElement.scrollHeight - 100
   )}px`;
   crystal.style.left = `${rand(
     0,
-    document.documentElement.scrollWidth - 50
+    document.documentElement.scrollWidth - 100
   )}px`;
 
   let temp = rand(0, 5);
+
+  crystal.style.rotate = `${rand(0, 360)}deg`;
 
   switch (temp) {
     case 1:
