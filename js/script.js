@@ -1,4 +1,4 @@
-const width = 1440;
+import crystalLogo from "../img/logo1.png"
 
 console.log(window.innerWidth);
 console.log(window.innerHeight);
@@ -16,7 +16,7 @@ function rand(min, max) {
 
 for (let i = 0; i < 10; i++) {
   let crystal = document.createElement("img");
-  crystal.src = "/img/logo1.png";
+  crystal.src = crystalLogo;
   crystal.classList.add("crystal");
   crystal.style.position = "absolute";
   crystal.style.top = `${rand(
