@@ -71,3 +71,17 @@ document.addEventListener("mousemove", function (e) {
     moveElement.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
   });
 });
+
+document.getElementById("btn2").addEventListener("click", () => {
+  const textToCopy = "NorthLights.org";
+
+  const tempInput = document.createElement("textarea");
+  tempInput.value = textToCopy;
+  document.body.appendChild(tempInput);
+
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+
+  document.body.removeChild(tempInput);
+});
